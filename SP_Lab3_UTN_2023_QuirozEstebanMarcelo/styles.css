@@ -1,0 +1,217 @@
+/* Estilos globales */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #121212;
+  font-family: 'Roboto', sans-serif;
+  color: #fff; /* Color de texto */
+}
+
+/* Contenedor de formulario de datos y formulario de ABM */
+#form-data-container,
+#form-amb-container {
+  display: flex;
+  border: 3px solid #263238;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #263238;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#form-amb-container {
+  display: none;
+}
+
+/* Título del formulario */
+#title-form {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #eceff1; /* Color de texto */
+}
+
+/* Contenedor de campos de entrada */
+#inputs-container,
+#inputs-container-amb {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Campos de entrada y etiquetas */
+#input-field {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+  color: #eceff1; /* Color de texto */
+}
+
+input,
+select {
+  width: 100%;
+  max-width: 340px;
+  height: 40px;
+  border: 1px solid #546e7a; /* Color del borde */
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #37474f; /* Color de fondo */
+  color: #eceff1; /* Color de texto */
+}
+
+/* Contenedores de botones */
+#buttons-container,
+#btns-container-edit-delete,
+#btns-container-add {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+/* Botones */
+button {
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 0 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+#btn-add {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+#btn-edit {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+#btn-delete {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* Campos de filtro y cálculo de edad promedio */
+#field-type-filter,
+#field-calculate-age-average {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+
+#ddl-type-filter,
+#num-calculate-age-average {
+  max-width: 150px;
+}
+
+#lbl-type-filter,
+#lbl-calculate-age-average,
+#lbl-ckl-colums {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-right: 10px;
+  color: #eceff1; /* Color de texto */
+}
+
+#btn-calculate-age-average {
+  min-height: min-content;
+  height: 40px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Opciones de columnas a mostrar */
+#ckl-colums-to-show {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+#chk-label {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #eceff1; /* Color de texto */
+}
+
+.chk-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+}
+
+/* Contenedor de la tabla */
+#table-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Tabla y celdas */
+table,
+th,
+td {
+  border: 1px solid #546e7a; /* Color del borde */
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+  color: #eceff1; /* Color de texto */
+}
+
+/* Estilos del spinner */
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #db9834;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Clase para ocultar el spinner */
+.hidden {
+  display: none;
+}
